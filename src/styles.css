@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Font-LAto */
+/* @font-face {
+    font-family: 'Lato' !important;
+    src: url('./assets/fonts/Lato/Lato-Bold.ttf') format("truetype");
+    font-weight: 700;
+} */
+
+/* Font-LAto */
+/* @font-face {
+    font-family: 'Lato' !important;
+    src: url('./assets/fonts/Lato/Lato-Regular.ttf') format("truetype");
+    font-weight: 400;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+
+.title{
+    /* font-family: 'Lato'; */
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: #535760;
+    margin: 0;
+    display: block;
+    margin-bottom: 5px;
+}
+
+p{
+    color: #7F7F7F;
+    font-size: 16px;
+    /* font-family: 'Lato'; */
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+body{
+    background: #f1f1f1;
+}
+
+*{
+    cursor: default;
+}

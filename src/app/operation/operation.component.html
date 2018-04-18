@@ -1,0 +1,27 @@
+<app-loader *ngIf="loading"></app-loader>
+<form [formGroup]="calcFormGroup" class="form-calculator">
+  <div class="formField">
+    <label class="title">Operación 1</label>
+    <input class="form-control title" formControlName="operationOne">
+    <div class="error" *ngIf="calcFormGroup.get('operationOne').touched && calcFormGroup.get('operationOne').hasError('required')">
+      Este campo es obligatorio
+    </div>
+  </div>
+  <div class="operators">
+    <button [ngClass]="{'selected': (operador == 'sum')}" class="operator" (click)="operar('sum')">+</button>
+    <button [ngClass]="{'selected': (operador == 'subtract')}" class="operator" (click)="operar('subtract')">-</button>
+    <button [ngClass]="{'selected': (operador == 'multiplication')}" class="operator" (click)="operar('multiplication')">x</button>
+    <button [ngClass]="{'selected': (operador == 'division')}" class="operator" (click)="operar('division')">&#247;</button>
+  </div>
+  <div class="formField">
+    <label class="title">Operación 2</label>
+    <input class="form-control title" formControlName="operationTwo">
+    <div class="error" *ngIf="calcFormGroup.get('operationTwo').touched && calcFormGroup.get('operationTwo').hasError('required')">
+      Este campo es obligatorio
+    </div>
+  </div>
+  <div class="formField">
+    <label class="title">Resultado</label>
+    <input class="form-control title" formControlName="result" [value]="result">
+  </div>
+</form>
